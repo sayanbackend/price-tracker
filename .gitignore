@@ -1,0 +1,19 @@
+# Terraform (state ignored globally, except bootstrap's — see exception below)
+**/.terraform/
+*.tfstate
+*.tfstate.*
+!bootstrap/*.tfstate
+
+# Docker
+lambda.zip
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Local test artifacts
+response.json
+
+# OS junk
+.DS_Store
