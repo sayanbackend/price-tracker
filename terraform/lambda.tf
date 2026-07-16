@@ -34,7 +34,7 @@ resource "aws_lambda_function" "price_tracker" {
   function_name = "price-tracker"
   role          = aws_iam_role.price_tracker_lambda.arn
   package_type  = "Image"
-  image_uri     = "${aws_ecr_repository.price_tracker.repository_url}:latest"
+  image_uri = "${aws_ecr_repository.price_tracker.repository_url}:${local.image_tag}"
   timeout       = 30
   memory_size   = 256
 
